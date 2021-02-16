@@ -1,0 +1,21 @@
+name: test
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    # Build docker:
+    - name: Build named dockerfile
+      run: docker build . --tag wemake-services/wemake-dind:latest
+
+    - name: Test docker build
+      run: |
+        docker run \
+          -v $PWD/test/sh:/build/test.sh \
+          --rm wemake-services/wemake-dind:latest \
+          sh /build/test.sh
