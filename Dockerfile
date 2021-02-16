@@ -5,7 +5,7 @@ LABEL vendor="wemake.services"
 
 # Installing system deps:
 RUN apk update && apk upgrade \
-  && apk add \
+  && apk add --no-cache \
        # Installing Python:
        python3 python3-dev py3-pip py3-wheel \
        # Installing build deps:
@@ -14,7 +14,6 @@ RUN apk update && apk upgrade \
        cargo gcc musl-dev
 
 WORKDIR /build
-COPY ./requirements.txt /build/
 
 # Installing Python dependencies:
 RUN pip3 install -U pip && pip3 --version \
