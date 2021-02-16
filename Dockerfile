@@ -18,5 +18,7 @@ COPY ./requirements.txt /build/
 
 # Installing Python dependencies:
 RUN pip3 install -U pip && pip3 --version \
-  && pip3 install pip-tools \
-  && pip-sync
+  && pip3 install \
+    dump-env \
+    docker-image-size-limit \
+    docker-compose

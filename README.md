@@ -19,8 +19,3 @@ It really helps us to speed up the build and fix possible errors in one place.
 
 We use tags, however in this particular case we enforce using `:latest`.
 It should always just work.
-
-
-## Python dependencies
-
-We use `pip-tools` to resolve and install dependencies.
