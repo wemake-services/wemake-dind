@@ -16,7 +16,7 @@ RUN apk update && apk upgrade \
 WORKDIR /build
 
 # Installing Python dependencies:
-RUN pip3 install -U pip && pip3 --version \
+RUN pip3 install -U pip \
   && pip3 install \
     dump-env \
     docker-image-size-limit \
