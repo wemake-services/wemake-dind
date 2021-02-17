@@ -17,6 +17,20 @@ We use this image in our GitLab-based builds. Like:
 
 It really helps us to speed up the build and fix possible errors in one place.
 
+Example usage:
+
+```yaml
+build:
+  image: wemakeservices/wemake-dind:latest
+  interruptible: true
+  services:
+    - docker:dind
+  variables:
+    DOCKER_DRIVER: overlay2
+  before_script:
+    - echo 'Done!'
+```
+
 
 ## Tags
 
