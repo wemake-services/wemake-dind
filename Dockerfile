@@ -17,7 +17,7 @@ WORKDIR /build
 
 # Installing Python dependencies:
 RUN pip3 install -U pip \
-  && pip3 install --no-use-pep517 \
+  && pip3 install \
     dump-env \
     docker-image-size-limit \
     docker-compose
