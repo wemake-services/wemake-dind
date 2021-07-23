@@ -8,6 +8,7 @@ pip3 --version
 git --version
 docker-compose --version
 dump-env --version
+disl --version
 
 # Running safety:
 safety check

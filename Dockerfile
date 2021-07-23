@@ -7,11 +7,16 @@ LABEL vendor="wemake.services"
 RUN apk update && apk upgrade \
   && apk add --no-cache \
        # Installing Python:
-       python3 python3-dev py3-pip \
+       python3 python3-dev \
        # Installing build deps:
-       libffi-dev openssl-dev build-base git \
+       libffi-dev openssl-dev build-base git curl \
        # Installing Rust (latest cryptography requires it):
-       cargo gcc musl-dev
+       cargo gcc musl-dev \
+  # Installing pip:
+  && curl 'https://bootstrap.pypa.io/get-pip.py' -o get-pip.py \
+  && python3 get-pip.py \
+  && rm -f get-pip.py
+
 
 WORKDIR /build
 COPY requirements.txt /build/requirements.txt
