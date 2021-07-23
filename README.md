@@ -3,7 +3,7 @@
 [![wemake.services](https://img.shields.io/badge/%20-wemake.services-green.svg?label=%20&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC%2FxhBQAAAAFzUkdCAK7OHOkAAAAbUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP%2F%2F%2F5TvxDIAAAAIdFJOUwAjRA8xXANAL%2Bv0SAAAADNJREFUGNNjYCAIOJjRBdBFWMkVQeGzcHAwksJnAPPZGOGAASzPzAEHEGVsLExQwE7YswCb7AFZSF3bbAAAAABJRU5ErkJggg%3D%3D)](https://wemake.services)
 [![test](https://github.com/wemake-services/wemake-dind/workflows/test/badge.svg)](https://github.com/wemake-services/wemake-dind/actions?query=workflow%3Atest)
 [![Dockerhub](https://img.shields.io/docker/pulls/wemakeservices/wemake-dind.svg)](https://hub.docker.com/r/wemakeservices/wemake-dind/) 
-[![image size](https://images.microbadger.com/badges/image/wemakeservices/wemake-dind.svg)](https://microbadger.com/images/wemakeservices/wemake-dind) 
+[![image size](https://shields.io/docker/image-size/wemakeservices/wemake-dind?sort=date)](https://hub.docker.com/r/wemakeservices/wemake-dind/) 
 
 Our docker-in-docker image with Python.
 
