@@ -7,7 +7,7 @@ LABEL vendor="wemake.services"
 RUN apk update && apk upgrade \
   && apk add --no-cache \
        # Installing Python:
-       python3 python3-dev py3-pip py3-wheel \
+       python3 python3-dev py3-pip \
        # Installing build deps:
        libffi-dev openssl-dev build-base git \
        # Installing Rust (latest cryptography requires it):

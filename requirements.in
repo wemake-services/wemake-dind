@@ -1,8 +1,9 @@
 # Install `pip-tools` locally,
 # modify this file
-# and run `pip-compile --generate-hashes`
+# and run `pip-compile --generate-hashes --upgrade --allow-unsafe`
 # to update `requirements.txt`
 
 dump-env
 docker-image-size-limit
 docker-compose
+wheel
