@@ -1,0 +1,8 @@
+# Install `pip-tools` locally,
+# modify this file
+# and run `pip-compile --generate-hashes`
+# to update `requirements.txt`
+
+dump-env
+docker-image-size-limit
+docker-compose

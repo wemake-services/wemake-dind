@@ -14,10 +14,9 @@ RUN apk update && apk upgrade \
        cargo gcc musl-dev
 
 WORKDIR /build
+COPY requirements.txt /build/requirements.txt
 
 # Installing Python dependencies:
 RUN pip3 install -U pip \
-  && pip3 install \
-    dump-env \
-    docker-image-size-limit \
-    docker-compose
+  && pip3 install -r requirements.txt \
+  && rm requirements.txt
