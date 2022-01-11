@@ -9,11 +9,9 @@ RUN apk update && apk upgrade \
        # Installing Python:
        python3 python3-dev \
        # Installing build deps:
-       libffi-dev openssl-dev build-base git curl \
+       libffi-dev openssl-dev build-base git curl bash \
        # Installing Rust (latest cryptography requires it):
        cargo gcc musl-dev \
-       # Installing bash:
-       bash \
   # Installing pip:
   && curl 'https://bootstrap.pypa.io/get-pip.py' -o get-pip.py \
   && python3 get-pip.py \
