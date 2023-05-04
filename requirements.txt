@@ -103,9 +103,9 @@ docker-compose==1.29.2 \
     --hash=sha256:4c8cd9d21d237412793d18bd33110049ee9af8dab3fe2c213bbd0733959b09b7 \
     --hash=sha256:8d5589373b35c8d3b1c8c1182c6e4a4ff14bffa3dd0b605fcd08f73c94cef809
     # via -r requirements.in
-docker-image-size-limit==0.4.1 \
-    --hash=sha256:6a76d9504fc9b752d80ac8b7fde2b33a9d2655a7d599dcc96c907f71926c8f82 \
-    --hash=sha256:9da2097dc8ffc27b4092da8eec779969b49ed4437baed5eb455a06bfa9358461
+docker-image-size-limit==1.0.0 \
+    --hash=sha256:b1bfcaf910399f05e08287314fbbb737bcd43753490147091c702184f70bc163 \
+    --hash=sha256:bf812f01e4d593139fd1cda6bc4b8135cb5d5cd7ea6ba709433c7c628dbd2804
     # via -r requirements.in
 dockerpty==0.4.1 \
     --hash=sha256:69a9d69d573a0daa31bcd1c0774eeed5c15c295fe719c61aca550ed1393156ce
