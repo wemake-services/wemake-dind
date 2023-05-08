@@ -103,9 +103,9 @@ docker-compose==1.29.2 \
     --hash=sha256:4c8cd9d21d237412793d18bd33110049ee9af8dab3fe2c213bbd0733959b09b7 \
     --hash=sha256:8d5589373b35c8d3b1c8c1182c6e4a4ff14bffa3dd0b605fcd08f73c94cef809
     # via -r requirements.in
-docker-image-size-limit==1.0.0 \
-    --hash=sha256:b1bfcaf910399f05e08287314fbbb737bcd43753490147091c702184f70bc163 \
-    --hash=sha256:bf812f01e4d593139fd1cda6bc4b8135cb5d5cd7ea6ba709433c7c628dbd2804
+docker-image-size-limit==1.0.1 \
+    --hash=sha256:9d6e59d48df316f9940c05633f6cdcb07ff75b8462d3764f05b734edd9373b10 \
+    --hash=sha256:ce391464ee1974332de2fd36d76c3008af1930abb583a84a4bf07a8ba2868977
     # via -r requirements.in
 dockerpty==0.4.1 \
     --hash=sha256:69a9d69d573a0daa31bcd1c0774eeed5c15c295fe719c61aca550ed1393156ce
@@ -221,6 +221,7 @@ requests==2.26.0 \
     # via
     #   docker
     #   docker-compose
+    #   docker-image-size-limit
 six==1.16.0 \
     --hash=sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926 \
     --hash=sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254
@@ -237,7 +238,9 @@ texttable==1.6.4 \
 urllib3==1.26.6 \
     --hash=sha256:39fb8672126159acb139a7718dd10806104dec1e2f0f6c88aab05d17df10c8d4 \
     --hash=sha256:f57b4c16c62fa2760b7e3d97c35b255512fb6b59a259730f36ba32ce9f8e342f
-    # via requests
+    # via
+    #   docker-image-size-limit
+    #   requests
 websocket-client==0.59.0 \
     --hash=sha256:2e50d26ca593f70aba7b13a489435ef88b8fc3b5c5643c1ce8808ff9b40f0b32 \
     --hash=sha256:d376bd60eace9d437ab6d7ee16f4ab4e821c9dae591e1b783c58ebd8aaf80c5c
