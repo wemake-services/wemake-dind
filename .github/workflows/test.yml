@@ -46,7 +46,11 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: wemakeservices/wemake-dind
-          flavor: latest=true
+          tags: |
+          # Produce versioned docker tag on git tag:
+          type=ref,event=tag
+          # Set latest tag for default branch:
+          type=raw,value=latest,enable={{is_default_branch}}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
