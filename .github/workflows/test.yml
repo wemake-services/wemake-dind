@@ -7,12 +7,19 @@ on:
   pull_request:
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     # Build docker:
     - name: Build named dockerfile
@@ -21,9 +28,9 @@ jobs:
     - name: Test docker build
       run: |
         docker run \
-          -v $PWD/test/sh:/build/test.sh \
+          -v $PWD/test.sh:/build/test.sh \
           --rm wemake-services/wemake-dind:latest \
-          sh /build/test.sh
+          bash /build/test.sh
 
   deploy:
     if: "github.event_name == 'push' && github.repository == 'wemake-services/wemake-dind'"
@@ -33,7 +40,7 @@ jobs:
 
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
@@ -47,6 +54,7 @@ jobs:
         with:
           images: wemakeservices/wemake-dind
           flavor: latest=true
+          tags: type=match,pattern=\d.\d.\d
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v4

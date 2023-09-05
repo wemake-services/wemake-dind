@@ -1,7 +1,6 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-set -o errexit
-set -o nounset
+set -e
 
 # Running tests:
 pip3 --version
