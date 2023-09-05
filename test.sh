@@ -5,9 +5,9 @@ set -e
 # Running tests:
 pip3 --version
 git --version
-docker compose --version
-dump-env --version
-disl --version
+docker compose --help
+dump-env -h
+disl -h
 
 # Installing test dependencies:
 pip3 install safety
