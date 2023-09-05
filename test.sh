@@ -7,7 +7,7 @@ pip3 --version
 git --version
 docker compose --help
 dump-env -h
-disl -h
+which disl
 
 # Installing test dependencies:
 pip3 install safety
