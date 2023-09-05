@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
-set -e
+set -o errexit
+set -o nounset
 
 # Running tests:
 pip3 --version
