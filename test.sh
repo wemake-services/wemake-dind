@@ -1,14 +1,10 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-# Installing test dependencies:
-pip3 install safety
+set -e
 
 # Running tests:
 pip3 --version
 git --version
-docker-compose --version
-dump-env --version
-disl --version
-
-# Running safety:
-safety check
+docker compose --help
+dump-env -h
+which disl

@@ -3,6 +3,10 @@ FROM docker:24.0
 LABEL maintainer="sobolevn@wemake.services"
 LABEL vendor="wemake.services"
 
+ENV PIP_NO_CACHE_DIR=1 \
+  PIP_DISABLE_PIP_VERSION_CHECK=1 \
+  PIP_DEFAULT_TIMEOUT=100
+
 # Installing system deps:
 RUN apk update && apk upgrade \
   && apk add --no-cache \
