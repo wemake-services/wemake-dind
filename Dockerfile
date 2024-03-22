@@ -22,6 +22,5 @@ WORKDIR /build
 COPY requirements.txt /build/requirements.txt
 
 # Installing Python dependencies:
-RUN pip3 install -U pip \
-  && pip3 install -r requirements.txt \
+RUN pip3 install -r requirements.txt \
   && rm requirements.txt
