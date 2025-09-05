@@ -1,4 +1,4 @@
-FROM docker:28.3.3
+FROM docker:28.4.0
 
 LABEL maintainer="mail@sobolevn.me"
 LABEL vendor="wemake.services"
