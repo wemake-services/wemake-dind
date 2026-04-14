@@ -104,9 +104,9 @@ docker==7.1.0 \
     --hash=sha256:ad8c70e6e3f8926cb8a92619b832b4ea5299e2831c14284663184e200546fa6c \
     --hash=sha256:c96b93b7f0a746f9e77d325bcfb87422a3d8bd4f03136ae8a85b37f1898d5fc0
     # via docker-image-size-limit
-docker-image-size-limit==2.0.0 \
-    --hash=sha256:52f16a1e628f97842fe0c6bf9f0c5a64a7a18e718c9a3adf41e659233667ec37 \
-    --hash=sha256:591703b475964fd12d9b7c04fb5b6d71a6306e45f3bc10fef8e92d62520a12f1
+docker-image-size-limit==2.2.0 \
+    --hash=sha256:ba7929035f4f781667263645c34f4b7965e2900a084335dacca151ca83dc9fe8 \
+    --hash=sha256:f583a03b1c561b4424b02f92c68a4035bbe50b8c5f0e59ae2c559db1cf854edd
     # via -r requirements.in
 dump-env==1.5.0 \
     --hash=sha256:11f05ceec5a76f26e916c51da80f2e07ce4d69fb160710e46169e550c503e9e4 \
